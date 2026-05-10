@@ -1,1 +1,202 @@
-# customers-retention-revenue-growth-
+Customer Retention & Revenue Growth Analysis
+
+Overview
+
+This project analyzes how customer behavior impacts revenue growth using the Olist Brazilian E-commerce dataset.
+
+The analysis began as two separate projects:
+
+* Revenue Analysis
+* Customer Behavior Analysis
+
+However, during the investigation, it became clear that both analyses were connected and explained the same business story from different perspectives.
+
+The final result is an integrated analytical dashboard that combines:
+
+* Revenue Trends
+* Customer Retention
+* Cohort Analysis
+* Product Revenue Concentration
+* Reviews & Operational Metrics
+
+The project focuses on identifying the main drivers behind revenue growth and evaluating whether that growth is sustainable.
+
+---
+
+# Business Problem
+
+The primary objective was to understand:
+
+> What drives revenue growth, and how does customer behavior influence it?
+
+Key business questions included:
+
+* Is revenue growth driven by order volume or order value?
+* Are customers returning after their first purchase?
+* Which product categories contribute most to revenue?
+* Do reviews or delivery speed affect repeat purchases?
+* Is revenue concentrated within a small number of categories?
+
+---
+
+# Dataset
+
+Dataset Used:
+
+* Olist Brazilian E-commerce Dataset
+
+Main tables used:
+
+* Orders
+* Customers
+* Payments
+* Order Items
+* Products
+* Reviews
+* Product Category Translation
+
+---
+
+# Tools & Technologies
+
+* PostgreSQL
+* SQL
+* Python (Pandas / Matplotlib)
+* Power BI
+
+---
+
+# Analysis Workflow
+
+## 1. Revenue Analysis
+
+The first step was analyzing:
+
+* Revenue Trends
+* Order Volume
+* Average Order Value (AOV)
+
+### Key Finding
+
+Revenue growth was primarily driven by increasing order volume rather than changes in AOV.
+
+---
+
+## 2. Customer Retention Analysis
+
+Customer behavior analysis revealed:
+
+* Extremely low repeat purchase behavior
+* Most customers purchased only once
+
+### Cohort Analysis
+
+A cohort retention analysis showed a sharp drop after the first month.
+
+### Key Findings
+
+* Repeat Rate ≈ 3%
+* One-time buyers represented the overwhelming majority of customers
+
+---
+
+## 3. Product Analysis
+
+Product category analysis showed that revenue was moderately concentrated within a limited number of categories.
+
+### Key Finding
+
+Top product categories generated a significant share of total revenue.
+
+---
+
+## 4. Reviews & Operational Analysis
+
+The analysis explored whether:
+
+* Review scores
+* Delivery speed
+
+had a measurable impact on repeat purchasing behavior.
+
+### Key Findings
+
+* Review scores showed minimal differences between repeat and one-time customers
+* Delivery speed had limited impact on customer retention
+
+---
+
+# Dashboard Structure
+
+## Page 1 — Revenue Growth Overview
+
+* Revenue Trend
+* Orders Trend
+* AOV Trend
+* Executive Insights
+
+## Page 2 — Customer & Product Insights
+
+* Cohort Heatmap
+* Repeat vs One-time Customers
+* Customer Revenue Analysis
+* Product Category Revenue
+* Review vs Revenue Scatter Plot
+* Delivery Analysis
+
+---
+
+# Key Insights
+
+* Revenue growth was primarily driven by order volume rather than AOV.
+* Customer retention was critically low.
+* Most customers purchased only once.
+* Revenue was moderately concentrated within a limited number of product categories.
+* Reviews and delivery speed showed limited impact on repeat behavior.
+
+---
+
+# What I Learned
+
+This project significantly changed how I think about data analysis.
+
+Initially, I treated:
+
+* revenue analysis,
+* customer analysis,
+* product analysis,
+* and operational analysis
+
+as separate domains.
+
+But through the project, I realized that effective analytics comes from connecting all business metrics into one coherent narrative.
+
+The biggest takeaway was understanding that dashboards should not simply display charts — they should tell a business story.
+
+---
+
+# Repository Contents
+
+* SQL Queries
+* Power BI Dashboard
+* Python Analysis Notebooks
+* Dataset Preparation Scripts
+* Dashboard Screenshots
+
+---
+
+# Future Improvements
+
+Potential future improvements include:
+
+* Building a fully normalized star schema model
+* Adding advanced DAX measures
+* Creating fully interactive cross-filtering dashboards
+* Expanding customer segmentation analysis
+
+---
+
+# Author
+
+Data Analyst Portfolio Project
+Built using SQL, Python, PostgreSQL, and Power BI.
