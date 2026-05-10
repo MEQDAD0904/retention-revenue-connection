@@ -94,24 +94,25 @@ ________________________________________________________________________________
 
 1. Revenue Overview
 Tracks revenue growth, order trends, and AOV behavior over time.
-(images/overview.png)
 
+![overview](images/overview.png)
 
 2. Customer Retention
 Focuses on cohort analysis and repeat purchase behavior.
-[overview](images/retention.png)
 
+![retention](images/retention.png)
 
 3. Product Analysis
 Highlights revenue concentration across product categories.
 
-[retention](images/products.png)
+
+![products](images/products.png)
 
 4. Reviews & Operations
 Explores customer satisfaction and delivery performance.
 
-[products](images/reviews.png)
 
+![reviews](images/reviews.png)
 ________________________________________________________________________________________________
 
 # Key Insights:
