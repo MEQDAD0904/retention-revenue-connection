@@ -99,16 +99,18 @@ Tracks revenue growth, order trends, and AOV behavior over time.
 
 2. Customer Retention
 Focuses on cohort analysis and repeat purchase behavior.
-(images/retention.png)
+[overview](images/retention.png)
 
 
 3. Product Analysis
 Highlights revenue concentration across product categories.
-(images/products.png)
+
+[retention](images/products.png)
 
 4. Reviews & Operations
 Explores customer satisfaction and delivery performance.
-(images/reviews.png)
+
+[products](images/reviews.png)
 
 ________________________________________________________________________________________________
 
@@ -130,14 +132,3 @@ Initially, I treated:
 as separate domains.
 But through the project, I realized that effective analytics comes from connecting all business metrics into one coherent narrative
 The biggest takeaway was understanding that dashboards should not simply display charts — they should tell a business story.
-
-
-
-
-
----
-
-# Author
-
-Data Analyst Portfolio Project
-Built using SQL, Python, PostgreSQL, and Power BI.
