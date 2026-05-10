@@ -1,5 +1,5 @@
-Customer Retention & Revenue Growth Analysis
-Overview
+Customer Retention & Revenue Growth Analysis Overview :
+
 This project analyzes how customer behavior impacts revenue growth using the Olist Brazilian E-commerce dataset.
 _________________________________________________________________________________________________________________________
 
