@@ -1,135 +1,112 @@
-Customer Retention & Revenue Growth Analysis Overview :
+# Customer Retention & Revenue Growth Analysis
 
-This project analyzes how customer behavior impacts revenue growth using the Olist Brazilian E-commerce dataset.
-_________________________________________________________________________________________________________________________
+> **Context:** This project started as two separate analyses — one for revenue, one for customer behavior.  
+> During the work, I realized both were answering the same business question from different angles.  
+> This is where I first connected them into one analytical story.
+>
+> A more structured version of this thinking, built with a full hypothesis framework, is here:  
+> 👉 [TheLook E-Commerce — Customer Retention Analysis](https://github.com/MEQDAD0904/thelook-ecommerce-customer-retention-analysis-)
 
-The analysis began as two separate projects:
-* Revenue Analysis
-* Customer Behavior Analysis
-However, during the investigation, it became clear that both analyses were connected and explained the same business story from different perspectives.
+---
 
-The final result is an integrated analytical dashboard that combines:
-* Revenue Trends
-* Customer Retention
-* Cohort Analysis
-* Product Revenue Concentration
-* Reviews & Operational Metrics
-The project focuses on identifying the main drivers behind revenue growth and evaluating whether that growth is sustainable.
-______________________________________________________________________________________________________________________________
+## The Business Question
 
-Business Problem
+**What drives revenue growth — and is that growth sustainable?**
 
-The primary objective was to understand:
-What drives revenue growth, and how does customer behavior influence it?
+This led to four connected questions:
+- Is revenue growing because of more orders, or higher order value?
+- Are customers returning after their first purchase?
+- Which product categories carry the most revenue weight?
+- Do delivery speed or review scores explain repeat behavior?
 
-Key business questions included:
-* Is revenue growth driven by order volume or order value?
-* Are customers returning after their first purchase?
-* Which product categories contribute most to revenue?
-* Do reviews or delivery speed affect repeat purchases?
-* Is revenue concentrated within a small number of categories?
-_________________________________________________________________________________________________________________________
+---
 
-Dataset
-Dataset Used:
-Olist Brazilian E-commerce Dataset
+## Dataset
 
-Main tables used:
-* Orders
-* Customers
-* Payments
-* Order Items
-* Products
-* Reviews
-* Product Category Translation
-________________________________________________________________________________
+**Olist Brazilian E-commerce Dataset**
 
-Tools & Technologies
-* PostgreSQL
-* SQL
-* Python (Pandas / Matplotlib)
-* Power BI
-________________________________________________________________________________
+| Table | Content |
+|---|---|
+| Orders | Transaction records |
+| Customers | Customer profiles |
+| Payments | Payment details |
+| Order Items | Product-level detail per order |
+| Products | Product catalog |
+| Reviews | Customer satisfaction scores |
 
-Analysis Workflow:
-1. Revenue Analysis
-The first step was analyzing:
-* Revenue Trends
-* Order Volume
-* Average Order Value (AOV)
+---
 
-Key Finding:
-Revenue growth was primarily driven by increasing order volume rather than changes in AOV.
+## Tools
 
-2. Customer Retention Analysis
-Customer behavior analysis revealed:
-* Extremely low repeat purchase behavior 
-* Most customers purchased only once
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
-Cohort Analysis
-A cohort retention analysis showed a sharp drop after the first month.
+---
 
-Key Findings:
-* Repeat Rate 3%
-* One-time buyers represented the overwhelming majority of customers
+## Analysis & Findings
 
-3. Product Analysis
-Product category analysis showed that revenue was moderately concentrated within a limited number of categories.
+### 1. Revenue Overview
 
-Key Finding:
-Top 5 product categories generated 38% of total revenue.
+![Revenue Overview](visuals/overview.png)
 
-4. Reviews & Operational Analysis
-The analysis explored whether:
-* Review scores
-* Delivery speed
-had a measurable impact on repeat purchasing behavior.
+Revenue grew from 0.8M to 2.7M between Jan–Oct 2017. Order volume followed the same curve — from 5K to 17K orders.
 
-Key Findings:
-* Review scores showed minimal differences between repeat and one-time customers
-* Delivery speed had limited impact on customer retention
-______________________________________________________________________________________________
+AOV stayed flat (444–468), confirming that **growth was volume-driven, not price-driven.**
 
-# Dashboard pages:
+---
 
-1. Revenue Overview
-Tracks revenue growth, order trends, and AOV behavior over time.
+### 2. Customer Retention
 
-![overview](images/overview.png)
+![Customer Retention](visuals/retention.png)
 
-2. Customer Retention
-Focuses on cohort analysis and repeat purchase behavior.
+97% of customers placed only one order. Repeat rate: **3%**.
 
-![retention](images/retention.png)
+The cohort table shows a sharp drop immediately after the first month — across all quarters. This means the retention problem is structural, not seasonal.
 
-3. Product Analysis
-Highlights revenue concentration across product categories.
+Repeat customers generate significantly more average revenue (309) vs one-time buyers (161) — making retention a high-leverage opportunity.
 
+---
 
-![products](images/products.png)
+### 3. Product Analysis
 
-4. Reviews & Operations
-Explores customer satisfaction and delivery performance.
+![Product Analysis](visuals/products.png)
 
+Top 5 categories generated **38% of total revenue**. The scatter plot between review score and revenue showed no clear pattern — high-revenue categories did not consistently receive higher ratings.
 
-![reviews](images/reviews.png)
-________________________________________________________________________________________________
+> This suggested review score alone is not a reliable predictor of revenue concentration.
 
-# Key Insights:
-* Revenue growth was primarily driven by order volume rather than AOV.
-* Customer retention was critically low.
-* Most customers purchased only once.
-* Revenue was moderately concentrated within a limited number of product categories.
-* Reviews and delivery speed showed limited impact on repeat behavior.
-_________________________________________________________________________________________________
+---
 
-What I Learned:
-This project significantly changed how I think about data analysis
-Initially, I treated:
-* revenue analysis,
-* customer analysis,
-* product analysis,
-* and operational analysis
-as separate domains.
-But through the project, I realized that effective analytics comes from connecting all business metrics into one coherent narrative
-The biggest takeaway was understanding that dashboards should not simply display charts — they should tell a business story.
+### 4. Delivery Speed & Reviews
+
+![Reviews and Operations](visuals/reviews.png)
+
+Average orders by delivery group: Slow (22.3), Fast (22.2), Medium (21.4).
+
+The difference is minimal — **delivery speed showed no measurable impact on repeat behavior** in this dataset.
+
+> Note: This was an observational finding, not a controlled test. Causation cannot be confirmed without further hypothesis testing.
+
+---
+
+## What I Learned
+
+This project changed how I think about analysis.
+
+I started with two separate dashboards. By the end, I realized they were answering the same question from different angles — revenue numbers don't explain themselves, they're the result of customer decisions and product patterns working together.
+
+The biggest gap I noticed in my own work: I was asking good questions, but without a structured hypothesis before touching the data. That gap is what I addressed in the next project:  
+👉 [TheLook E-Commerce — Customer Retention Analysis](https://github.com/MEQDAD0904/thelook-ecommerce-customer-retention-analysis-)
+
+---
+
+## Project Files
+
+| File | Description |
+|---|---|
+| `analysis.sql` | PostgreSQL queries |
+| `visuals/overview.png` | Revenue growth dashboard |
+| `visuals/retention.png` | Cohort and retention dashboard |
+| `visuals/products.png` | Product revenue concentration |
+| `visuals/reviews.png` | Delivery and review analysis |
